@@ -35,7 +35,6 @@ const buttonVariants = {
 }
 
 const Hero = () => {
-  // Typing animation for the headline
   const [text, setText] = useState('')
   const [index, setIndex] = useState(0)
   const fullText = 'Frontend Developer'
@@ -46,7 +45,6 @@ const Hero = () => {
         setText(prevText => prevText + fullText[index])
         setIndex(prevIndex => prevIndex + 1)
       }, 100)
-      
       return () => clearTimeout(timer)
     }
   }, [index])
@@ -61,27 +59,13 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <motion.div 
           className="absolute top-20 right-[10%] w-64 h-64 bg-primary-100 rounded-full opacity-60 blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.6, 0.4, 0.6]
-          }}
-          transition={{ 
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
+          animate={{ scale: [1, 1.2, 1], opacity: [0.6, 0.4, 0.6] }}
+          transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
         />
         <motion.div 
           className="absolute bottom-20 left-[10%] w-80 h-80 bg-secondary-100 rounded-full opacity-60 blur-3xl"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            opacity: [0.6, 0.5, 0.6]
-          }}
-          transition={{ 
-            duration: 10,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.6, 0.5, 0.6] }}
+          transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
         />
       </div>
       
@@ -147,23 +131,22 @@ const Hero = () => {
             </div>
           </div>
           
+          {/* ✅ Image now visible on all screen sizes */}
           <motion.div 
-            className="hidden md:flex justify-center items-center"
+            className="flex justify-center items-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <div className="relative">
-              {/* Profile image */}
-              <div className="w-[350px] h-[350px] rounded-full overflow-hidden md:flex-wrap border-4 border-white shadow-xl">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <img
                   src={MyPic}
                   alt="David, Frontend Developer"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
-              {/* Decorative elements */}
+
               <motion.div 
                 className="absolute -top-6 -right-6 w-24 h-24 bg-primary-100 rounded-lg flex items-center justify-center shadow-lg"
                 initial={{ y: 20, opacity: 0 }}
