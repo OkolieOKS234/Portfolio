@@ -49,7 +49,7 @@ const ProjectCard = ({ project, index, inView }) => {
             </span>
           ))}
         </div>
-        <p className="text-gray-600 line-clamp-2">{description}</p>
+        <p className="text-gray-600">{description}</p>
       </div>
     </motion.div>
   )

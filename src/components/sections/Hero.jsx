@@ -148,18 +148,19 @@ const Hero = () => {
           </div>
           
           <motion.div 
-            className="hidden md:flex justify-center items-center"
+            className="flex justify-center items-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <div className="relative">
               {/* Profile image */}
-              <div className="w-[450px] h-[450px] rounded-[30px] overflow-hidden md:flex-wrap border-4 border-white shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
+              <div className="w-full h-full md:w-[450px] md:h-[450px] rounded-[30px] overflow-hidden border-4 border-white shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
                 <img
                   src={MyPic}
-                  alt="David, Frontend Developer"
-                  className="w-full h-full object-cover"
+                  alt="David, Software Engineer"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
                 />
               </div>
               
@@ -183,7 +184,7 @@ const Hero = () => {
                 transition={{ delay: 1.4 }}
               >
                 <div className="text-secondary-600 font-bold text-center">
-                  <span className="block text-xl">5+</span>
+                  <span className="block text-xl">4+</span>
                   <span className="text-xs">Projects</span>
                 </div>
               </motion.div>
