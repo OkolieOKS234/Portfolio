@@ -33,7 +33,7 @@ const Navbar = ({ activeSection }) => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white shadow-md py-3' 
-          : 'bg-transparent py-5'
+          : 'bg-white shadow-md py-5'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
