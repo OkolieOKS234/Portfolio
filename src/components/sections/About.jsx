@@ -46,7 +46,7 @@ const About = () => {
       className="section bg-white"
       ref={ref}
     >
-      <div className="container-custom">
+      <div className="container-custom bg-black/30 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
         <motion.div 
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}

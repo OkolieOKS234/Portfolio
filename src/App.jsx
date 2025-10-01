@@ -38,8 +38,7 @@ function App() {
         <About />
         <Services />
         <Portfolio />
-        <Testimonials />
-        <Contact />
+         <Contact />
       </main>
       <Footer />
     </div>

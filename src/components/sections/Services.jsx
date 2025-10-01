@@ -36,9 +36,9 @@ const services = [
   },
   {
     icon: <FiShield />,
-    title: 'Web Accessibility',
-    description: 'Making your website accessible to all users, including those with disabilities',
-    color: 'accent'
+    title: 'Rest API Integration',
+    description: 'Connecting your website with external services and data sources for dynamic content',
+    color: 'primary'
   }
 ]
 

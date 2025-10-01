@@ -2,13 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  background-color: #121212
+}
+
 @layer base {
+
   html {
     @apply scroll-smooth;
+    
   }
   
   body {
     @apply font-sans text-gray-800 bg-white;
+  }
+
+  /* Hero image sizing */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    
+    @media (max-width: 768px) {
+      width: 120%;
+      transform: translateX(-10%);
+    }
   }
   
   h1, h2, h3, h4, h5, h6 {

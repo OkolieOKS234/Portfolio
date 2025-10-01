@@ -55,12 +55,17 @@ const Hero = () => {
     <section 
       id="hero" 
       data-section="hero"
-      className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50"
+      className="min-h-screen flex items-center relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 100%)',
+        backdropFilter: 'blur(10px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(10px) saturate(180%)'
+      }}
     >
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <motion.div 
-          className="absolute top-20 right-[10%] w-64 h-64 bg-primary-100 rounded-full opacity-60 blur-3xl"
+          className="absolute top-20 right-[10%] w-64 h-64 bg-white/10 rounded-full opacity-60 blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.6, 0.4, 0.6]
@@ -72,7 +77,7 @@ const Hero = () => {
           }}
         />
         <motion.div 
-          className="absolute bottom-20 left-[10%] w-80 h-80 bg-secondary-100 rounded-full opacity-60 blur-3xl"
+          className="absolute bottom-20 left-[10%] w-80 h-80 bg-white/10 rounded-full opacity-60 blur-3xl"
           animate={{ 
             scale: [1, 1.3, 1],
             opacity: [0.6, 0.5, 0.6]
@@ -87,7 +92,7 @@ const Hero = () => {
       
       <div className="container-custom z-10 mt-16 md:mt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
+          <div className="glass-content p-6 bg-black/30 backdrop-blur-sm rounded-2xl border border-white/10">
             <motion.h2 
               className="text-lg md:text-xl font-medium text-primary-600 mb-3"
               custom={0}
@@ -112,7 +117,7 @@ const Hero = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg"
+              className="text-lg md:text-xl text-white/90 mb-8 max-w-lg"
               custom={2}
               initial="hidden"
               animate="visible"
@@ -147,49 +152,53 @@ const Hero = () => {
             </div>
           </div>
           
-          <motion.div 
-            className="flex justify-center items-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <div className="relative">
-              {/* Profile image */}
-              <div className="w-full h-full md:w-[450px] md:h-[450px] rounded-[30px] overflow-hidden border-4 border-white shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
-                <img
-                  src={MyPic}
-                  alt="David, Software Engineer"
-                  className="w-full h-full object-cover object-center"
-                  loading="lazy"
-                />
-              </div>
-              
-              {/* Decorative elements */}
+          <div className="glass-content p-6 bg-black/30 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div className="hero-content">
               <motion.div 
-                className="absolute -top-8 -right-8 w-20 h-20 bg-primary-100 rounded-lg flex items-center justify-center shadow-lg"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.2 }}
+                className="flex justify-center items-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <div className="text-primary-600 font-bold text-center">
-                  <span className="block text-xl">3+</span>
-                  <span className="text-xs">Years Exp.</span>
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                className="absolute -bottom-6 -left-6 w-20 h-20 bg-secondary-100 rounded-lg flex items-center justify-center shadow-lg"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.4 }}
-              >
-                <div className="text-secondary-600 font-bold text-center">
-                  <span className="block text-xl">4+</span>
-                  <span className="text-xs">Projects</span>
+                <div className="relative">
+                  {/* Profile image */}
+                  <div className="w-full h-full md:w-[450px] md:h-[450px] rounded-[30px] overflow-hidden border-4 border-white shadow-xl transform hover:scale-[1.02] transition-transform duration-300">
+                    <img
+                      src={MyPic}
+                      alt="David, Software Engineer"
+                      className="w-full h-full object-cover object-center hero-image"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  {/* Decorative elements */}
+                  <motion.div 
+                    className="absolute -top-8 -right-8 w-20 h-20 bg-primary-100 rounded-lg flex items-center justify-center shadow-lg"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 1.2 }}
+                  >
+                    <div className="text-primary-600 font-bold text-center">
+                      <span className="block text-xl">3+</span>
+                      <span className="text-xs">Years Exp.</span>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="absolute -bottom-6 -left-6 w-20 h-20 bg-secondary-100 rounded-lg flex items-center justify-center shadow-lg"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 1.4 }}
+                  >
+                    <div className="text-secondary-600 font-bold text-center">
+                      <span className="block text-xl">4+</span>
+                      <span className="text-xs">Projects</span>
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ const projects = [
     image: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     description: 'A powerful component and section based package that tends to make building 3d websites, mobile apps, dashboards, and portfolios easier with beautiful-looking components built using CSS + React and NPM.',
     technologies: ['React', 'NodeJS', 'CSS', 'Styled Components', 'Redux'],
-    link: '#'
+    link: 'https://www.npmjs.com/package/fixal-ui-web'
   },
   {
     id: 2,
@@ -31,33 +31,7 @@ const projects = [
     technologies: ['Reactjs', 'TailwindCSS', ],
     link: '#'
   },
-  {
-    id: 4,
-    title: 'Fitness Tracker App',
-    category: 'app',
-    image: 'https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'A mobile-first fitness tracking application with workout plans and progress visualization.',
-    technologies: ['React Native', 'Redux', 'Victory Charts'],
-    link: '#'
-  },
-  {
-    id: 5,
-    title: 'Social Media Dashboard',
-    category: 'ui',
-    image: 'https://images.pexels.com/photos/4549408/pexels-photo-4549408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'A comprehensive social media management dashboard with analytics and scheduling features.',
-    technologies: ['React', 'Chart.js', 'Material UI'],
-    link: '#'
-  },
-  {
-    id: 6,
-    title: 'Recipe Finder',
-    category: 'ui',
-    image: 'https://images.pexels.com/photos/6802983/pexels-photo-6802983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'An interactive recipe finder with filtering options and step-by-step cooking instructions.',
-    technologies: ['React', 'Spoonacular API', 'CSS Grid'],
-    link: '#'
-  }
+  
 ]
 
 const Portfolio = () => {
